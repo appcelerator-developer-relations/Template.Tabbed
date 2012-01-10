@@ -1,4 +1,4 @@
-function AppWindow(title, tab) {
+function AppWindow(title) {
 	var self = Ti.UI.createWindow({
 		title:title,
 		backgroundColor:'white'
@@ -13,7 +13,9 @@ function AppWindow(title, tab) {
 	self.add(button);
 	
 	button.addEventListener('click', function() {
-		tab.open(Ti.UI.createWindow({
+		//containingTab attribute must be set by parent tab group on
+		//the window for this work
+		self.containingTab.open(Ti.UI.createWindow({
 			title: L('newWindow'),
 			backgroundColor: 'white'
 		}));
