@@ -1,13 +1,10 @@
-function AppTabGroup() {
-	//declare module dependencies
-	var AppWindow = require('ui/AppWindow');
-	
+function ApplicationTabGroup(Window) {
 	//create module instance
 	var self = Ti.UI.createTabGroup();
 	
 	//create app tabs
-	var win1 = new AppWindow(L('home')),
-		win2 = new AppWindow(L('settings'));
+	var win1 = new Window(L('home')),
+		win2 = new Window(L('settings'));
 	
 	var tab1 = Ti.UI.createTab({
 		title: L('home'),
@@ -29,4 +26,4 @@ function AppTabGroup() {
 	return self;
 };
 
-module.exports = AppTabGroup;
+module.exports = ApplicationTabGroup;

@@ -1,4 +1,4 @@
-function AppWindow(title) {
+function ApplicationWindow(title) {
 	var self = Ti.UI.createWindow({
 		title:title,
 		backgroundColor:'white'
@@ -24,4 +24,4 @@ function AppWindow(title) {
 	return self;
 };
 
-module.exports = AppWindow;
+module.exports = ApplicationWindow;
