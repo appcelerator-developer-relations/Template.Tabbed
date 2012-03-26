@@ -32,14 +32,7 @@ if (Ti.version < 1.8 ) {
 		Window = require('ui/tablet/ApplicationWindow');
 	}
 	else {
-		// iPhone makes use of the platform-specific navigation controller,
-		// all other platforms follow a similar UI pattern
-		if (osname === 'iphone') {
-			Window = require('ui/handheld/ios/ApplicationWindow');
-		}
-		else {
-			Window = require('ui/handheld/android/ApplicationWindow');
-		}
+		Window = require('ui/handheld/ApplicationWindow');
 	}
 
 	var ApplicationTabGroup = require('ui/common/ApplicationTabGroup');
